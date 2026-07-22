@@ -1,10 +1,10 @@
 # PM Especialista
 
-**Criada e mantida pelo Product Guru’s.**
+**Criada e mantida pelo Paulo Chiodi da Product Guru’s.**
 
 Skill do Claude que responde como um PM sênior. Não é um prompt genérico de "aja como um PM". São 28 arquivos, um por framework, e o Claude decide qual abrir dependendo do que você perguntou.
 
-O Product Guru’s criou a skill a partir de um problema comum: pedir ajuda de produto pro Claude e receber uma resposta de consultoria, cheia de teoria e sem decisão nenhuma no fim. Essa skill inverte isso. Ela obriga o Claude a ler o framework certo antes de responder e a fechar com uma escolha concreta, não com um resumo do que ele acabou de explicar.
+Criei a skill a partir de um problema comum: pedir ajuda de produto pro Claude e receber uma resposta de consultoria, cheia de teoria e sem decisão nenhuma no fim. Essa skill inverte isso. Ela obriga o Claude a ler o framework certo antes de responder e a fechar com uma escolha concreta, não com um resumo do que ele acabou de explicar.
 
 ## Sobre o projeto
 
