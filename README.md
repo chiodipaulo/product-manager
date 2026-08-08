@@ -51,7 +51,9 @@ Ao compartilhar templates, canvases ou documentos gerados com a skill, preserve 
 
 `Product Guru’s · PM Especialista`
 
-O conteúdo pode ser adaptado para uso interno. Redistribuição da skill como produto próprio, remoção de autoria ou revenda dependem de autorização do Product Guru’s.
+O código-fonte e as referências são licenciados sob a [PolyForm Internal Use 1.0.0](LICENSE.md): uso pessoal e uso interno por empresas são permitidos, inclusive com adaptações internas. Redistribuição, publicação de versões modificadas, incorporação em produtos, sublicenciamento e revenda exigem autorização comercial por escrito. Consulte [licenciamento comercial](COMMERCIAL-LICENSE.md).
+
+A licença da skill não reivindica propriedade sobre documentos, análises, matrizes, código ou outros outputs produzidos para o usuário. Os nomes e a identidade de Product Guru’s e PM Especialista não são licenciados para identificar produtos derivados.
 
 ## Estrutura
 
