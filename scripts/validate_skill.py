@@ -28,8 +28,8 @@ def main() -> None:
         fail("SKILL.md frontmatter is invalid")
 
     references = sorted(REFS.glob("*.md"))
-    if len(references) != 28:
-        fail(f"expected 28 reference files, found {len(references)}")
+    if len(references) != 27:
+        fail(f"expected 27 reference files, found {len(references)}")
 
     cited = set(re.findall(r"references/[a-z0-9-]+\.md", text))
     missing = sorted(path for path in cited if not (ROOT / path).exists())
