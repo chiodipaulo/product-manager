@@ -36,7 +36,11 @@ Impact: 2 (high impact)
 Confidence: 80%
 Effort: 1 person-month
 
-Evidence: analytics query covering the last complete quarter\nConfidence: 80%\nEffort: 1 person-month\n\nRICE = (1000 × 2 × 0.8) / 1 = 1600
+Evidence: analytics query covering the last complete quarter
+Confidence: 80%
+Effort: 1 person-month
+
+RICE = (1000 × 2 × 0.8) / 1 = 1600
 ```
 
 
