@@ -1,0 +1,115 @@
+{
+  "version": "1.0",
+  "skill": "pm-especialista",
+  "description": "Contrato comportamental inicial. Cada caso avalia roteamento, uso de evidência e qualidade da decisão.",
+  "cases": [
+    {
+      "id": "rice_missing_inputs",
+      "prompt": "Priorize login social, exportação em PDF e dashboard executivo usando RICE.",
+      "expected_references": [
+        "references/prioritization-craft.md"
+      ],
+      "must": [
+        "pedir Reach, Impact, evidência para Confidence e Effort",
+        "não produzir ranking numérico",
+        "explicar por que os dados podem mudar a ordem"
+      ],
+      "must_not": [
+        "usar 80% como confiança padrão",
+        "inventar alcance ou esforço"
+      ],
+      "max_references": 1
+    },
+    {
+      "id": "positioning_missing_competitor",
+      "prompt": "Crie o posicionamento do meu novo software de gestão.",
+      "expected_references": [
+        "references/positioning-craft.md"
+      ],
+      "must": [
+        "pedir segmento ou cliente-alvo",
+        "pedir alternativa competitiva ou solução atual",
+        "identificar a falta de contexto antes da recomendação"
+      ],
+      "must_not": [
+        "inventar concorrentes",
+        "entregar posicionamento final como fato"
+      ],
+      "max_references": 1
+    },
+    {
+      "id": "prd_sparse_context",
+      "prompt": "Escreva um PRD completo para uma feature de notificações inteligentes.",
+      "expected_references": [
+        "references/strategic-build.md",
+        "references/continuous-discovery.md"
+      ],
+      "must": [
+        "identificar problema, público, evidência e métrica ausentes",
+        "evitar preencher contatos, números ou prazos",
+        "propor a menor próxima etapa"
+      ],
+      "must_not": [
+        "inventar pesquisa com usuários",
+        "inventar meta percentual",
+        "declarar a solução pronta para desenvolvimento"
+      ],
+      "max_references": 2
+    },
+    {
+      "id": "ai_feature_launch",
+      "prompt": "Vamos lançar um copiloto de IA dentro do nosso produto B2B. Estruture a decisão e o plano.",
+      "expected_references": [
+        "references/ai-product-patterns.md",
+        "references/positioning-craft.md",
+        "references/launch-execution.md"
+      ],
+      "must": [
+        "definir evals ou barra de qualidade",
+        "considerar custo e latência",
+        "conectar posicionamento ao lançamento",
+        "declarar riscos ou trade-offs"
+      ],
+      "must_not": [
+        "usar IA apenas porque está disponível",
+        "tratar qualidade como avaliação subjetiva sem critério"
+      ],
+      "max_references": 3
+    },
+    {
+      "id": "simple_reversible_decision",
+      "prompt": "O texto do botão está confuso. Faço um teste A/B ou corrijo direto?",
+      "expected_references": [
+        "references/ship-decisions.md"
+      ],
+      "must": [
+        "classificar reversibilidade e custo",
+        "dar uma escolha concreta",
+        "evitar processo desproporcional"
+      ],
+      "must_not": [
+        "carregar um conjunto amplo de frameworks",
+        "exigir significância estatística para uma correção óbvia"
+      ],
+      "max_references": 1
+    },
+    {
+      "id": "decision_tradeoff",
+      "prompt": "Devo adiar o lançamento por duas semanas para melhorar o onboarding?",
+      "expected_references": [
+        "references/ship-decisions.md",
+        "references/decision-frameworks.md"
+      ],
+      "must": [
+        "declarar uma decisão ou critério objetivo para decidir",
+        "explicitar o custo da escolha",
+        "distinguir fatos, suposições e lacunas"
+      ],
+      "must_not": [
+        "terminar apenas com uma lista de prós e contras",
+        "inventar impacto de retenção"
+      ],
+      "max_references": 2
+    }
+  ]
+}
