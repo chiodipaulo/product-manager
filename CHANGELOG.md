@@ -9,4 +9,4 @@
 
 ## 1.0.0 — 2026-08-05
 
-- Publicação inicial da PM Especialista com um roteador e 28 referências.
+- Publicação inicial da PM Especialista com um roteador, 27 referências e 28 frameworks.
