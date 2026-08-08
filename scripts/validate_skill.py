@@ -23,6 +23,9 @@ def fail(message: str) -> None:
 def main() -> None:
     if not SKILL.exists():
         fail("SKILL.md is missing")
+    for required in ("LICENSE.md", "COMMERCIAL-LICENSE.md"):
+        if not (ROOT / required).exists():
+            fail(f"{required} is missing")
     text = SKILL.read_text(encoding="utf-8")
     if not text.startswith("---\n") or "name: pm-especialista" not in text:
         fail("SKILL.md frontmatter is invalid")
@@ -54,6 +57,16 @@ def main() -> None:
         for path in case["expected_references"]:
             if not (ROOT / path).exists():
                 fail(f"{case['id']} cites missing reference: {path}")
+
+    license_text = (ROOT / "LICENSE.md").read_text(encoding="utf-8")
+    if "PolyForm Internal Use License 1.0.0" not in license_text:
+        fail("LICENSE.md must reference PolyForm Internal Use 1.0.0")
+    if "does not claim ownership" not in license_text:
+        fail("LICENSE.md must preserve the user-output ownership clarification")
+
+    commercial = (ROOT / "COMMERCIAL-LICENSE.md").read_text(encoding="utf-8")
+    if "No trademark license" not in commercial:
+        fail("commercial terms must preserve the trademark boundary")
 
     prioritization = (REFS / "prioritization-craft.md").read_text(encoding="utf-8")
     if "use 80% if unsure" in prioritization:
