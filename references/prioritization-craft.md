@@ -23,7 +23,7 @@ RICE Score = (Reach × Impact × Confidence) / Effort
 
 Reach: How many users affected (per quarter)
 Impact: How much impact (0.25, 0.5, 1, 2, 3)
-Confidence: How confident (%, use 80% if unsure)
+Confidence: How confident the evidence makes us (%). Never use a default merely because evidence is missing
 Effort: How much work (person-months)
 ```
 
@@ -36,8 +36,27 @@ Impact: 2 (high impact)
 Confidence: 80%
 Effort: 1 person-month
 
+Evidence: analytics query covering the last complete quarter
+Confidence: 80%
+Effort: 1 person-month
+
 RICE = (1000 × 2 × 0.8) / 1 = 1600
 ```
+
+
+### Confidence Must Come From Evidence
+
+Do not calculate a RICE score when confidence is unknown. Ask for the missing evidence or label the result as a scenario, not a ranking.
+
+| Confidence | Minimum evidence |
+|---|---|
+| 100% | Stable observed metric or completed operational measurement |
+| 80% | Consistent research plus a verifiable estimate |
+| 50% | Limited sample or indirect evidence |
+| 20% | Internal opinion, analogy, or untested assumption |
+| Unknown | Do not score yet |
+
+The percentages are calibration anchors for this skill, not universal measurements. Record the evidence beside the number so a reviewer can challenge it.
 
 ### 2. Value vs Effort Matrix
 

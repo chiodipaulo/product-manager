@@ -1,8 +1,10 @@
 # PM Especialista
 
+**Versão atual: 1.1.0**
+
 **Criada e mantida pelo Product Guru’s.**
 
-Skill do Claude que responde como um PM sênior. Não é um prompt genérico de "aja como um PM". São 28 arquivos, um por framework, e o Claude decide qual abrir dependendo do que você perguntou.
+Skill do Claude que responde como um PM sênior. Não é um prompt genérico de "aja como um PM". São 27 referências que cobrem 28 frameworks, e o Claude decide quais abrir dependendo do que você perguntou.
 
 O Product Guru’s criou a skill a partir de um problema comum: pedir ajuda de produto pro Claude e receber uma resposta de consultoria, cheia de teoria e sem decisão nenhuma no fim. Essa skill inverte isso. Ela obriga o Claude a ler o framework certo antes de responder e a fechar com uma escolha concreta, não com um resumo do que ele acabou de explicar.
 
@@ -49,7 +51,9 @@ Ao compartilhar templates, canvases ou documentos gerados com a skill, preserve 
 
 `Product Guru’s · PM Especialista`
 
-O conteúdo pode ser adaptado para uso interno. Redistribuição da skill como produto próprio, remoção de autoria ou revenda dependem de autorização do Product Guru’s.
+O código-fonte e as referências são licenciados sob a [PolyForm Internal Use 1.0.0](LICENSE.md): uso pessoal e uso interno por empresas são permitidos, inclusive com adaptações internas. Redistribuição, publicação de versões modificadas, incorporação em produtos, sublicenciamento e revenda exigem autorização comercial por escrito. Consulte [licenciamento comercial](COMMERCIAL-LICENSE.md).
+
+A licença da skill não reivindica propriedade sobre documentos, análises, matrizes, código ou outros outputs produzidos para o usuário. Os nomes e a identidade de Product Guru’s e PM Especialista não são licenciados para identificar produtos derivados.
 
 ## Estrutura
 
@@ -60,7 +64,7 @@ pm-especialista/
     ├── strategic-build.md
     ├── prioritization-craft.md
     ├── exec-comms.md
-    └── ... (28 no total)
+    └── ... (27 referências no total)
 ```
 
 ## Como instalar
@@ -68,6 +72,19 @@ pm-especialista/
 Copie a pasta `pm-especialista` para o diretório de skills do Claude (`/mnt/skills/user/` no Claude.ai, ou o equivalente no Claude Code). O `SKILL.md` tem o front-matter de `name` e `description` que faz o Claude carregar a skill automaticamente quando o pedido combina com algum dos gatilhos.
 
 Não precisa configurar nada além disso. A skill é só arquivos markdown, sem dependência de código.
+
+## Qualidade e evals
+
+A versão 1.1.0 introduz um contrato explícito de evidência e seis evals comportamentais. Eles verificam se a skill pede dados ausentes, evita rankings artificiais, carrega poucas referências e fecha decisões com custo ou renúncia.
+
+Para validar a estrutura localmente:
+
+```bash
+python3 scripts/validate_skill.py
+python3 -m unittest discover -s tests -v
+```
+
+O GitHub Actions executa as mesmas verificações em cada push e pull request. Os casos estão em `evals/cases.json`; o validador garante a integridade do pacote, enquanto a execução das respostas contra modelos deve ser feita por um runner de evals.
 
 ## O que ela não faz
 
